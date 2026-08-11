@@ -36,7 +36,7 @@ def build_parser():
         default=DEFAULT_SOURCE_RECALL,
         help="Original DESI script providing the memory-safe pickle row iterator.",
     )
-    parser.add_argument("--threshold", type=float, default=None, help="Override checkpoint best_threshold")
+    parser.add_argument("--threshold", type=float, default=0.99, help="Override checkpoint best_threshold")
     parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--max_records", type=int, default=0, help="Stop after N valid records; 0 means unlimited")
     parser.add_argument("--max_files", type=int, default=0, help="Process at most N pickle files; 0 means unlimited")
